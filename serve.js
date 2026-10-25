@@ -33,6 +33,8 @@ const server = http.createServer((req, res) => {
         res.end('500 Internal Server Error');
       }
     } else {
+      res.setHeader('X-Content-Type-Options', 'nosniff');
+      res.setHeader('X-Frame-Options', 'DENY');
       res.writeHead(200, { 'Content-Type': contentType });
       res.end(content);
     }

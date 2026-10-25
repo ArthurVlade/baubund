@@ -165,7 +165,7 @@ function initCookieBanner() {
   }
 }
 
-// Auto-fill inquiry form if navigated from calculator
+// Auto-fill inquiry form if navigated from calculator (with strict input sanitization)
 function initContactFormAutofill() {
   const params = new URLSearchParams(window.location.search);
   const service = params.get('service');
@@ -174,19 +174,24 @@ function initContactFormAutofill() {
 
   if (!service && !sqm && !estimate) return;
 
+  const allowedServices = ['paint', 'floor', 'tiles', 'drywall', 'garden', 'full'];
+  const safeService = allowedServices.includes(service) ? service : 'full';
+  const safeSqm = parseFloat(sqm) ? String(Math.abs(parseFloat(sqm))) : '45';
+  const safeEstimate = parseInt(estimate, 10) ? String(Math.abs(parseInt(estimate, 10))) : '0';
+
   const typeSelect = document.getElementById('inquiry-service-type');
   const descArea = document.getElementById('inquiry-description');
 
   if (typeSelect && service) {
-    typeSelect.value = service;
+    typeSelect.value = safeService;
   }
 
   if (descArea) {
     const lang = (window.i18n && window.i18n.currentLang) || 'de';
     if (lang === 'de') {
-      descArea.value = `Geschätztes Projekt aus dem Kostenrechner:\n- Gewerk: ${service}\n- Fläche ca.: ${sqm} m²\n- Vorkalkulation: ca. ${estimate} € inkl. MwSt.\n\nBitte um Kontaktaufnahme zur Terminabstimmung in der Region Stuttgart / bundesweit.`;
+      descArea.value = `Geschätztes Projekt aus dem Kostenrechner:\n- Gewerk: ${safeService}\n- Fläche ca.: ${safeSqm} m²\n- Vorkalkulation: ca. ${safeEstimate} € inkl. MwSt.\n\nBitte um Kontaktaufnahme zur Terminabstimmung in der Region Stuttgart / bundesweit.`;
     } else {
-      descArea.value = `Estimated project from cost calculator:\n- Trade: ${service}\n- Area approx.: ${sqm} m²\n- Budget estimate: approx. €${estimate} incl. VAT\n\nPlease contact me to coordinate an on-site consultation in the Stuttgart region / nationwide.`;
+      descArea.value = `Estimated project from cost calculator:\n- Trade: ${safeService}\n- Area approx.: ${safeSqm} m²\n- Budget estimate: approx. €${safeEstimate} incl. VAT\n\nPlease contact me to coordinate an on-site consultation in the Stuttgart region / nationwide.`;
     }
   }
 }

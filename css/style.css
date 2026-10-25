@@ -449,25 +449,6 @@ img, svg {
   box-shadow: 0 4px 12px rgba(15, 23, 42, 0.16);
 }
 
-/* App badge link in nav */
-.nav-link-app {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  color: var(--color-blueprint);
-  font-weight: 600;
-}
-
-.nav-link-app::after {
-  content: "APP";
-  font-size: 0.6875rem;
-  font-weight: 800;
-  background-color: var(--color-blueprint-light);
-  color: var(--color-blueprint);
-  padding: 0.1rem 0.35rem;
-  border-radius: 4px;
-}
-
 .nav-cta-mobile {
   display: none;
 }

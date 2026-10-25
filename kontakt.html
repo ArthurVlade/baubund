@@ -34,14 +34,10 @@
         <a href="rechner.html" class="nav-link" data-i18n="nav_calculator">Kostenrechner</a>
         <a href="pitch-deck.html" class="nav-link" data-i18n="nav_pitch">B2B Pitch Deck</a>
         <a href="kontakt.html" class="nav-link active" data-i18n="nav_contact">Kontakt</a>
+        <a href="app.html" class="nav-link nav-link-app" data-i18n="nav_app">Kundenportal</a>
       </nav>
 
       <div class="header-actions">
-        <div class="location-pill" title="Startregion Stuttgart & Deutschlandweiter Rollout">
-          <span class="location-dot"></span>
-          <span data-i18n="nav_location_badge">Stuttgart & bundesweit</span>
-        </div>
-
         <button class="lang-toggle-btn" aria-label="Sprache wechseln / Switch Language" title="DE / EN">
           <span class="lang-opt lang-opt-de active">DE</span>
           <span class="lang-opt lang-opt-en">EN</span>
@@ -106,8 +102,8 @@
                     <option value="bad" data-i18n="tab_2_title">Badsanierung & Sanitär</option>
                     <option value="floor" data-i18n="tab_3_title">Hochwertiger Innenausbau & Parkett</option>
                     <option value="paint" data-i18n="tab_4_title">Maler- & Spachteltechnik Q3/Q4</option>
-                    <option value="drywall">Trockenbauwand / Raumteiler</option>
-                    <option value="garden">Garten & Außenanlagen</option>
+                    <option value="drywall" data-i18n="form_opt_drywall">Trockenbauwand / Raumteiler</option>
+                    <option value="garden" data-i18n="form_opt_garden">Garten & Außenanlagen</option>
                   </select>
                 </div>
 
@@ -126,7 +122,7 @@
                 </div>
 
                 <div class="form-group full-width">
-                  <label class="form-label" for="inquiry-description">Vorhaben beschreiben</label>
+                  <label class="form-label" for="inquiry-description" data-i18n="form_desc_label">Vorhaben beschreiben</label>
                   <textarea id="inquiry-description" rows="5" class="form-textarea" data-i18n-placeholder="form_desc_placeholder" placeholder="Beschreiben Sie kurz Ihr Vorhaben (z.B. 85m² Wohnung in Stuttgart komplett sanieren, neues Bad und Parkett)..."></textarea>
                 </div>
               </div>
@@ -166,7 +162,7 @@
                 </div>
 
                 <div style="border-top: 1px solid var(--color-border); padding-top: 1rem;">
-                  <span style="font-weight: 700; display: block; color: var(--color-ink-primary); margin-bottom: 0.25rem;">Startregion & Zentrale:</span>
+                  <span style="font-weight: 700; display: block; color: var(--color-ink-primary); margin-bottom: 0.25rem;" data-i18n="contact_hq_label">Startregion & Zentrale:</span>
                   <p style="font-size: 0.875rem; color: var(--color-ink-muted);">
                     BAUBUND Projektgesellschaft<br>
                     Königstraße 28<br>
@@ -178,12 +174,12 @@
 
             <!-- Guarantee Box -->
             <div class="calc-panel" style="background-color: var(--color-blueprint-light); border-color: #CBD5E1;">
-              <h4 style="font-size: 1.0625rem; color: var(--color-blueprint); margin-bottom: 0.75rem;">Unser Leistungsversprechen</h4>
+              <h4 style="font-size: 1.0625rem; color: var(--color-blueprint); margin-bottom: 0.75rem;" data-i18n="contact_promise_title">Unser Leistungsversprechen</h4>
               <ul style="font-size: 0.875rem; color: var(--color-blueprint); display: flex; flex-direction: column; gap: 0.5rem;">
-                <li>✓ Kostenlose Vor-Ort-Besichtigung im Raum Stuttgart & bundesweit</li>
-                <li>✓ 100% verbindliche Festpreisbindung</li>
-                <li>✓ Zertifizierte Meister- & Fachbetriebe</li>
-                <li>✓ 5 Jahre Gewährleistung nach BGB</li>
+                <li data-i18n="contact_p1">✓ Kostenlose Vor-Ort-Besichtigung im Raum Stuttgart & bundesweit</li>
+                <li data-i18n="contact_p2">✓ 100% verbindliche Festpreisbindung</li>
+                <li data-i18n="contact_p3">✓ Zentraler Bauleiter als alleiniger Ansprechpartner</li>
+                <li data-i18n="contact_p4">✓ 5 Jahre Gewährleistung nach BGB</li>
               </ul>
             </div>
           </div>
@@ -194,11 +190,11 @@
     <!-- Legal Information Modal / Inline Anchor -->
     <section class="section section-muted" id="impressum-datenschutz" style="padding-top: 3rem; padding-bottom: 3rem;">
       <div class="container" style="max-width: 800px; font-size: 0.875rem; color: var(--color-ink-secondary); line-height: 1.6;">
-        <h3 style="margin-bottom: 0.75rem; color: var(--color-ink-primary);">Impressum & Datenschutz</h3>
-        <p style="margin-bottom: 0.5rem;"><strong>Angaben gemäß § 5 TMG:</strong> BAUBUND Projektgesellschaft, Königstraße 28, 70173 Stuttgart</p>
-        <p style="margin-bottom: 0.5rem;"><strong>Vertreten durch:</strong> Die Geschäftsführung, E-Mail: kontakt@baubund-projekte.de, Tel: +49 (0) 711 4905 8230</p>
-        <p style="margin-bottom: 0.5rem;"><strong>Haftung für Inhalte & Gewerke:</strong> Die Baudienstleistungen werden über geprüfte Meister- und Fachbetriebe koordiniert. BAUBUND haftet im Rahmen der vertraglich vereinbarten Bauleitung und Gewährleistung.</p>
-        <p><strong>Datenschutzhinweis:</strong> Ihre über das Kontaktformular übermittelten Daten werden ausschließlich zur Bearbeitung und Beantwortung Ihrer konkreten Projektanfrage verarbeitet und nicht an unberechtigte Dritte weitergegeben.</p>
+        <h3 style="margin-bottom: 0.75rem; color: var(--color-ink-primary);" data-i18n="footer_legal">Impressum & Datenschutz</h3>
+        <p style="margin-bottom: 0.5rem;" data-i18n="contact_legal_tmg"><strong>Angaben gemäß § 5 TMG:</strong> BAUBUND Projektgesellschaft, Königstraße 28, 70173 Stuttgart</p>
+        <p style="margin-bottom: 0.5rem;" data-i18n="contact_legal_rep"><strong>Vertreten durch:</strong> Die Geschäftsführung, E-Mail: kontakt@baubund-projekte.de, Tel: +49 (0) 711 4905 8230</p>
+        <p style="margin-bottom: 0.5rem;" data-i18n="contact_legal_liability"><strong>Haftung für Inhalte & Gewerke:</strong> Die Baudienstleistungen werden über geprüfte Meister- und Fachbetriebe koordiniert. BAUBUND haftet im Rahmen der vertraglich vereinbarten Bauleitung und Gewährleistung.</p>
+        <p data-i18n="contact_legal_privacy"><strong>Datenschutzhinweis:</strong> Ihre über das Kontaktformular übermittelten Daten werden ausschließlich zur Bearbeitung und Beantwortung Ihrer konkreten Projektanfrage verarbeitet und nicht an unberechtigte Dritte weitergegeben.</p>
       </div>
     </section>
   </main>

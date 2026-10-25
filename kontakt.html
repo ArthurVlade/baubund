@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt & Projektanfrage | BAUBUND</title>
+  <meta name="description" content="Fordern Sie Ihr unverbindliches Festpreisangebot an. Persönliche Beratung durch unsere Baukoordination vor Ort in Stuttgart oder bundesweit.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <style>:focus-visible { outline: 2px solid #D97706; outline-offset: 2px; }</style>
+</head>
+<body>
+
+  <!-- Floating Capsule Header (Reference 1) -->
+  <header class="site-header">
+    <div class="header-pill">
+      <a href="index.html" class="logo-wrapper">
+        <div class="logo-icon" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="7" height="7"></rect>
+            <rect x="14" y="3" width="7" height="7"></rect>
+            <rect x="14" y="14" width="7" height="7"></rect>
+            <rect x="3" y="14" width="7" height="7"></rect>
+          </svg>
+        </div>
+        <span data-i18n="brand_name">BAUBUND</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Hauptnavigation">
+        <a href="index.html" class="nav-link" data-i18n="nav_home">Home</a>
+        <a href="leistungen.html" class="nav-link" data-i18n="nav_services">Gewerke</a>
+        <a href="ablauf.html" class="nav-link" data-i18n="nav_process">Ablauf</a>
+        <a href="partner.html" class="nav-link" data-i18n="nav_partners">Für Partner</a>
+        <a href="rechner.html" class="nav-link" data-i18n="nav_calculator">Kostenrechner</a>
+        <a href="pitch-deck.html" class="nav-link" data-i18n="nav_pitch">B2B Pitch Deck</a>
+        <a href="kontakt.html" class="nav-link active" data-i18n="nav_contact">Kontakt</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="location-pill" title="Startregion Stuttgart & Deutschlandweiter Rollout">
+          <span class="location-dot"></span>
+          <span data-i18n="nav_location_badge">Stuttgart & bundesweit</span>
+        </div>
+
+        <button class="lang-toggle-btn" aria-label="Sprache wechseln / Switch Language" title="DE / EN">
+          <span class="lang-opt lang-opt-de active">DE</span>
+          <span class="lang-opt lang-opt-en">EN</span>
+        </button>
+
+        <a href="kontakt.html" class="header-cta-btn" data-i18n="nav_cta">Projekt anfragen</a>
+
+        <button class="mobile-menu-toggle" aria-label="Menü öffnen" aria-expanded="false">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Page Header -->
+    <section class="section" style="padding-bottom: 2rem;">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag" data-i18n="nav_contact">Kontakt & Beratung</span>
+          <h1 data-i18n="page_contact_title">Kontakt & Projektanfrage</h1>
+          <p class="section-subtitle" data-i18n="page_contact_intro">
+            Haben Sie ein konkretes Vorhaben oder Fragen zu unserem Modell? Sprechen Sie direkt mit unserer Baukoordination.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Form Layout -->
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <div style="display: grid; grid-template-columns: 1.4fr 0.8fr; gap: 3rem; align-items: start;">
+          <!-- Left: Inquiry Form -->
+          <div class="calc-panel">
+            <h2 style="font-size: 1.4rem; margin-bottom: 1.5rem;" data-i18n="contact_form_title">Kostenloses Angebot anfordern</h2>
+
+            <form data-ajax-form id="project-inquiry-form">
+              <div class="form-grid">
+                <div class="form-group">
+                  <label class="form-label" for="inquiry-name" data-i18n="form_name">Vollständiger Name</label>
+                  <input type="text" id="inquiry-name" required class="form-input" placeholder="z.B. Markus Fischer">
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="inquiry-phone" data-i18n="form_phone">Telefonnummer</label>
+                  <input type="tel" id="inquiry-phone" required class="form-input" placeholder="+49 171 9876543">
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="inquiry-email" data-i18n="form_email">E-Mail-Adresse</label>
+                  <input type="email" id="inquiry-email" required class="form-input" placeholder="ihre.email@example.de">
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="inquiry-service-type" data-i18n="form_project_type">Art des Projekts</label>
+                  <select id="inquiry-service-type" class="form-select">
+                    <option value="full" data-i18n="tab_1_title">Komplett-Wohnungssanierung</option>
+                    <option value="bad" data-i18n="tab_2_title">Badsanierung & Sanitär</option>
+                    <option value="floor" data-i18n="tab_3_title">Hochwertiger Innenausbau & Parkett</option>
+                    <option value="paint" data-i18n="tab_4_title">Maler- & Spachteltechnik Q3/Q4</option>
+                    <option value="drywall">Trockenbauwand / Raumteiler</option>
+                    <option value="garden">Garten & Außenanlagen</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="inquiry-location" data-i18n="form_address">Postleitzahl & Ort des Bauvorhabens</label>
+                  <input type="text" id="inquiry-location" required class="form-input" placeholder="z.B. 70173 Stuttgart">
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="inquiry-timeframe" data-i18n="form_timeframe">Gewünschter Starttermin</label>
+                  <select id="inquiry-timeframe" class="form-select">
+                    <option value="asap" data-i18n="form_timeframe_asap">Schnellstmöglich</option>
+                    <option value="month" data-i18n="form_timeframe_month">Innerhalb der nächsten 4 Wochen</option>
+                    <option value="later" data-i18n="form_timeframe_later">Später / Noch in Planung</option>
+                  </select>
+                </div>
+
+                <div class="form-group full-width">
+                  <label class="form-label" for="inquiry-description">Vorhaben beschreiben</label>
+                  <textarea id="inquiry-description" rows="5" class="form-textarea" data-i18n-placeholder="form_desc_placeholder" placeholder="Beschreiben Sie kurz Ihr Vorhaben (z.B. 85m² Wohnung in Stuttgart komplett sanieren, neues Bad und Parkett)..."></textarea>
+                </div>
+              </div>
+
+              <div style="margin-bottom: 1.5rem;">
+                <label class="checkbox-card" style="font-size: 0.875rem;">
+                  <input type="checkbox" required>
+                  <span data-i18n="form_consent">Ich stimme zu, dass meine Angaben zur Bearbeitung meiner Anfrage gespeichert und verarbeitet werden.</span>
+                </label>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;" data-i18n="form_submit_btn">Projekt jetzt unverbindlich anfragen</button>
+
+              <div class="form-feedback" role="alert"></div>
+            </form>
+          </div>
+
+          <!-- Right: Direct Information Box -->
+          <div>
+            <div class="calc-panel" style="margin-bottom: 2rem;">
+              <h3 style="font-size: 1.25rem; margin-bottom: 1.25rem; border-bottom: 1px solid var(--color-border); padding-bottom: 0.75rem;" data-i18n="contact_info_title">Direkter Draht</h3>
+              
+              <div style="display: flex; flex-direction: column; gap: 1.25rem; font-size: 0.9375rem;">
+                <div>
+                  <span style="font-weight: 700; display: block; color: var(--color-ink-primary);" data-i18n="contact_phone_label">Telefon:</span>
+                  <a href="tel:+4971149058230" style="color: var(--color-accent); font-weight: 700; font-size: 1.125rem;" data-i18n="contact_phone_val">+49 (0) 711 4905 8230</a>
+                </div>
+
+                <div>
+                  <span style="font-weight: 700; display: block; color: var(--color-ink-primary);" data-i18n="contact_email_label">E-Mail:</span>
+                  <a href="mailto:kontakt@baubund-projekte.de" style="color: var(--color-ink-secondary);" data-i18n="contact_email_val">kontakt@baubund-projekte.de</a>
+                </div>
+
+                <div>
+                  <span style="font-weight: 700; display: block; color: var(--color-ink-primary);" data-i18n="contact_hours_label">Erreichbarkeit:</span>
+                  <span style="color: var(--color-ink-secondary);" data-i18n="contact_hours_val">Mo – Sa: 07:30 – 19:00 Uhr</span>
+                </div>
+
+                <div style="border-top: 1px solid var(--color-border); padding-top: 1rem;">
+                  <span style="font-weight: 700; display: block; color: var(--color-ink-primary); margin-bottom: 0.25rem;">Startregion & Zentrale:</span>
+                  <p style="font-size: 0.875rem; color: var(--color-ink-muted);">
+                    BAUBUND Projektgesellschaft<br>
+                    Königstraße 28<br>
+                    70173 Stuttgart, Deutschland
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Guarantee Box -->
+            <div class="calc-panel" style="background-color: var(--color-blueprint-light); border-color: #CBD5E1;">
+              <h4 style="font-size: 1.0625rem; color: var(--color-blueprint); margin-bottom: 0.75rem;">Unser Leistungsversprechen</h4>
+              <ul style="font-size: 0.875rem; color: var(--color-blueprint); display: flex; flex-direction: column; gap: 0.5rem;">
+                <li>✓ Kostenlose Vor-Ort-Besichtigung im Raum Stuttgart & bundesweit</li>
+                <li>✓ 100% verbindliche Festpreisbindung</li>
+                <li>✓ Zertifizierte Meister- & Fachbetriebe</li>
+                <li>✓ 5 Jahre Gewährleistung nach BGB</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Legal Information Modal / Inline Anchor -->
+    <section class="section section-muted" id="impressum-datenschutz" style="padding-top: 3rem; padding-bottom: 3rem;">
+      <div class="container" style="max-width: 800px; font-size: 0.875rem; color: var(--color-ink-secondary); line-height: 1.6;">
+        <h3 style="margin-bottom: 0.75rem; color: var(--color-ink-primary);">Impressum & Datenschutz</h3>
+        <p style="margin-bottom: 0.5rem;"><strong>Angaben gemäß § 5 TMG:</strong> BAUBUND Projektgesellschaft, Königstraße 28, 70173 Stuttgart</p>
+        <p style="margin-bottom: 0.5rem;"><strong>Vertreten durch:</strong> Die Geschäftsführung, E-Mail: kontakt@baubund-projekte.de, Tel: +49 (0) 711 4905 8230</p>
+        <p style="margin-bottom: 0.5rem;"><strong>Haftung für Inhalte & Gewerke:</strong> Die Baudienstleistungen werden über geprüfte Meister- und Fachbetriebe koordiniert. BAUBUND haftet im Rahmen der vertraglich vereinbarten Bauleitung und Gewährleistung.</p>
+        <p><strong>Datenschutzhinweis:</strong> Ihre über das Kontaktformular übermittelten Daten werden ausschließlich zur Bearbeitung und Beantwortung Ihrer konkreten Projektanfrage verarbeitet und nicht an unberechtigte Dritte weitergegeben.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="logo-wrapper" style="margin-bottom: 1rem;">
+            <div class="logo-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="7" height="7"></rect>
+                <rect x="14" y="3" width="7" height="7"></rect>
+                <rect x="14" y="14" width="7" height="7"></rect>
+                <rect x="3" y="14" width="7" height="7"></rect>
+              </svg>
+            </div>
+            <span data-i18n="brand_name">BAUBUND</span>
+          </div>
+          <p style="font-size: 0.875rem; margin-bottom: 1.5rem;" data-i18n="footer_about">
+            BAUBUND ist Ihr verlässlicher Generalpartner für Handwerks- und Bauprojekte. Deutschlandweiter Rollout ab Metropolregion Stuttgart. Wir verbinden Meisterbetriebe, smarte Baumarkt-Logistik und verbindliche Festpreise.
+          </p>
+          <button class="lang-toggle-btn" aria-label="Sprache wechseln / Switch Language">
+            <span class="lang-opt lang-opt-de active">DE</span>
+            <span class="lang-opt lang-opt-en">EN</span>
+          </button>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title" data-i18n="footer_quicklinks">Schnellzugriff</h4>
+          <div class="footer-links">
+            <a href="index.html" class="footer-link" data-i18n="nav_home">Home</a>
+            <a href="leistungen.html" class="footer-link" data-i18n="nav_services">Gewerke</a>
+            <a href="ablauf.html" class="footer-link" data-i18n="nav_process">Ablauf</a>
+            <a href="partner.html" class="footer-link" data-i18n="nav_partners">Für Partner</a>
+            <a href="rechner.html" class="footer-link" data-i18n="nav_calculator">Kostenrechner</a>
+            <a href="pitch-deck.html" class="footer-link" data-i18n="nav_pitch">B2B Pitch Deck</a>
+            <a href="kontakt.html" class="footer-link" data-i18n="nav_contact">Kontakt</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title" data-i18n="footer_trades">Gewerke</h4>
+          <div class="footer-links">
+            <a href="leistungen.html#sanierung" class="footer-link" data-i18n="tab_1_title">Komplett-Wohnungssanierung</a>
+            <a href="leistungen.html#bad" class="footer-link" data-i18n="tab_2_title">Badsanierung & Sanitär</a>
+            <a href="leistungen.html#boden" class="footer-link" data-i18n="tab_3_title">Hochwertiger Innenausbau & Parkett</a>
+            <a href="leistungen.html#maler" class="footer-link" data-i18n="tab_4_title">Maler- & Spachteltechnik Q3/Q4</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title" data-i18n="contact_info_title">Direkter Draht</h4>
+          <div class="footer-links" style="font-size: 0.875rem;">
+            <p><strong data-i18n="contact_phone_label">Telefon:</strong> <a href="tel:+4971149058230" data-i18n="contact_phone_val">+49 (0) 711 4905 8230</a></p>
+            <p><strong data-i18n="contact_email_label">E-Mail:</strong> <a href="mailto:kontakt@baubund-projekte.de" data-i18n="contact_email_val">kontakt@baubund-projekte.de</a></p>
+            <p><strong data-i18n="contact_hours_label">Erreichbarkeit:</strong> <span data-i18n="contact_hours_val">Mo – Sa: 07:30 – 19:00 Uhr</span></p>
+            <div style="margin-top: 1rem;">
+              <a href="kontakt.html" class="btn btn-primary btn-sm" data-i18n="nav_cta">Projekt anfragen</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span data-i18n="footer_copyright">© 2026 BAUBUND Projektgesellschaft. Alle Rechte vorbehalten.</span>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="#impressum-datenschutz" class="footer-link" data-i18n="footer_imprint">Impressum</a>
+          <a href="#impressum-datenschutz" class="footer-link" data-i18n="footer_privacy">Datenschutz</a>
+          <a href="#impressum-datenschutz" class="footer-link" data-i18n="footer_terms">AGB</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

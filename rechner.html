@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interaktiver Kostenrechner | BAUBUND</title>
+  <meta name="description" content="Berechnen Sie in 60 Sekunden die geschätzten Kosten für Wohnungssanierung, Badsanierung, Parkett oder Malerarbeiten inklusive Qualitätsmaterial und Meisterarbeit.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <style>:focus-visible { outline: 2px solid #D97706; outline-offset: 2px; }</style>
+</head>
+<body>
+
+  <!-- Floating Capsule Header (Reference 1) -->
+  <header class="site-header">
+    <div class="header-pill">
+      <a href="index.html" class="logo-wrapper">
+        <div class="logo-icon" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="7" height="7"></rect>
+            <rect x="14" y="3" width="7" height="7"></rect>
+            <rect x="14" y="14" width="7" height="7"></rect>
+            <rect x="3" y="14" width="7" height="7"></rect>
+          </svg>
+        </div>
+        <span data-i18n="brand_name">BAUBUND</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Hauptnavigation">
+        <a href="index.html" class="nav-link" data-i18n="nav_home">Home</a>
+        <a href="leistungen.html" class="nav-link" data-i18n="nav_services">Gewerke</a>
+        <a href="ablauf.html" class="nav-link" data-i18n="nav_process">Ablauf</a>
+        <a href="partner.html" class="nav-link" data-i18n="nav_partners">Für Partner</a>
+        <a href="rechner.html" class="nav-link active" data-i18n="nav_calculator">Kostenrechner</a>
+        <a href="pitch-deck.html" class="nav-link" data-i18n="nav_pitch">B2B Pitch Deck</a>
+        <a href="kontakt.html" class="nav-link" data-i18n="nav_contact">Kontakt</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="location-pill" title="Startregion Stuttgart & Deutschlandweiter Rollout">
+          <span class="location-dot"></span>
+          <span data-i18n="nav_location_badge">Stuttgart & bundesweit</span>
+        </div>
+
+        <button class="lang-toggle-btn" aria-label="Sprache wechseln / Switch Language" title="DE / EN">
+          <span class="lang-opt lang-opt-de active">DE</span>
+          <span class="lang-opt lang-opt-en">EN</span>
+        </button>
+
+        <a href="kontakt.html" class="header-cta-btn" data-i18n="nav_cta">Projekt anfragen</a>
+
+        <button class="mobile-menu-toggle" aria-label="Menü öffnen" aria-expanded="false">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Page Header -->
+    <section class="section" style="padding-bottom: 2rem;">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag" data-i18n="nav_calculator">Kostenrechner</span>
+          <h1 data-i18n="calc_page_title">Interaktiver Kostenschätzer</h1>
+          <p class="section-subtitle" data-i18n="calc_page_intro">
+            Wählen Sie Ihr Gewerk, geben Sie die Raumgröße an und sehen Sie sofort einen realistischen Richtpreis für Arbeitszeit und Qualitätsmaterial.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Calculator Interface -->
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <div class="calc-container">
+          <!-- Inputs Column -->
+          <div class="calc-panel">
+            <form id="project-calc-form" onsubmit="return false;">
+              <!-- Step 1: Trade -->
+              <div class="calc-section">
+                <label class="calc-label" for="calc-service" data-i18n="calc_step_service">1. Gewerk auswählen</label>
+                <select id="calc-service" class="form-select">
+                  <option value="full" data-i18n="calc_opt_full">Komplett-Wohnungssanierung schlüsselfertig</option>
+                  <option value="tiles" data-i18n="calc_opt_tiles">Fliesenarbeiten & Sanitärvorbereitung</option>
+                  <option value="floor" data-i18n="calc_opt_floor">Bodenbelag (Parkett, Design-Vinyl, Laminat)</option>
+                  <option value="paint" data-i18n="calc_opt_paint">Maler- & Spachtelarbeiten (Q3/Q4 Glätte)</option>
+                  <option value="drywall" data-i18n="calc_opt_drywall">Trockenbauwand / Raumteiler</option>
+                  <option value="garden" data-i18n="calc_opt_garden">Garten & Außenanlagen (Pflaster, Zaun)</option>
+                </select>
+              </div>
+
+              <!-- Step 2: Dimensions -->
+              <div class="calc-section">
+                <label class="calc-label" for="calc-sqm" data-i18n="calc_step_size">2. Fläche / Projektgröße</label>
+                <div class="slider-group">
+                  <input type="range" id="calc-sqm-range" class="range-slider" min="10" max="250" step="5" value="75">
+                  <input type="number" id="calc-sqm" class="form-input range-val-input" min="5" max="500" value="75">
+                  <span style="font-weight: 700; color: var(--color-ink-secondary);">m²</span>
+                </div>
+              </div>
+
+              <!-- Step 3: Material Quality Tier -->
+              <div class="calc-section">
+                <label class="calc-label" data-i18n="calc_step_quality">3. Material-Qualitätsstufe</label>
+                <div class="quality-options">
+                  <label class="radio-card">
+                    <input type="radio" name="calc-quality" value="standard" checked>
+                    <div>
+                      <strong style="display: block; font-size: 0.9375rem;" data-i18n="calc_qual_standard">Solide Markenqualität (z.B. Hornbach/OBI Standard)</strong>
+                      <span style="font-size: 0.8125rem; color: var(--color-ink-muted);">Bewährte Markenprodukte für solide Beanspruchung</span>
+                    </div>
+                  </label>
+
+                  <label class="radio-card">
+                    <input type="radio" name="calc-quality" value="premium">
+                    <div>
+                      <strong style="display: block; font-size: 0.9375rem;" data-i18n="calc_qual_premium">Premium Fachhandelsqualität (robuster, langlebiger)</strong>
+                      <span style="font-size: 0.8125rem; color: var(--color-ink-muted);">Höhere Abriebklassen, feinere Pigmentierung, längere Lebensdauer</span>
+                    </div>
+                  </label>
+
+                  <label class="radio-card">
+                    <input type="radio" name="calc-quality" value="eco">
+                    <div>
+                      <strong style="display: block; font-size: 0.9375rem;" data-i18n="calc_qual_eco">Ökologisch & Exklusiv (Naturfarben, Massivholz, High-End)</strong>
+                      <span style="font-size: 0.8125rem; color: var(--color-ink-muted);">Emissionsarm, mineralische Naturwerkstoffe, Design-Oberflächen</span>
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Step 4: Optional Extras -->
+              <div class="calc-section">
+                <label class="calc-label" data-i18n="calc_step_extras">4. Zusatzleistungen</label>
+                <label class="checkbox-card">
+                  <input type="checkbox" id="calc-extra-removal">
+                  <span data-i18n="calc_extra_removal">Altbelag entfernen & fachgerecht entsorgen</span>
+                </label>
+                <label class="checkbox-card">
+                  <input type="checkbox" id="calc-extra-express">
+                  <span data-i18n="calc_extra_express">Express-Ausführung (Start innerhalb von 5 Werktagen)</span>
+                </label>
+                <label class="checkbox-card">
+                  <input type="checkbox" id="calc-extra-furniture">
+                  <span data-i18n="calc_extra_furniture">Möbel rücken, abdecken & Endreinigung</span>
+                </label>
+              </div>
+            </form>
+          </div>
+
+          <!-- Sticky Result Column -->
+          <div class="calc-summary-card">
+            <h3 class="summary-title" data-i18n="calc_res_title">Ihre geschätzte Kostenaufstellung</h3>
+
+            <div class="summary-row">
+              <span data-i18n="calc_res_labor">Geschätzte Arbeitsleistung:</span>
+              <strong id="calc-labor-val">12.941 €</strong>
+            </div>
+
+            <div class="summary-row">
+              <span data-i18n="calc_res_material">Material & Logistik (Baumarkt/Fachhandel):</span>
+              <strong id="calc-material-val">6.694 €</strong>
+            </div>
+
+            <div class="summary-row total-row">
+              <span data-i18n="calc_res_total">Gesamtpreis (Richtwert inkl. MwSt.):</span>
+              <span class="total-val" id="calc-total-val">19.635 €</span>
+            </div>
+
+            <p class="summary-note" data-i18n="calc_res_note">
+              Hinweis: Dies ist eine unverbindliche Orientierung. Für ein verbindliches Festpreisangebot führen wir gerne eine kostenlose Vor-Ort-Besichtigung durch.
+            </p>
+
+            <button type="button" id="calc-adopt-btn" class="btn btn-primary btn-lg" style="width: 100%;" data-i18n="calc_btn_adopt">
+              Dieses Projekt unverbindlich anfragen
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="logo-wrapper" style="margin-bottom: 1rem;">
+            <div class="logo-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="7" height="7"></rect>
+                <rect x="14" y="3" width="7" height="7"></rect>
+                <rect x="14" y="14" width="7" height="7"></rect>
+                <rect x="3" y="14" width="7" height="7"></rect>
+              </svg>
+            </div>
+            <span data-i18n="brand_name">BAUBUND</span>
+          </div>
+          <p style="font-size: 0.875rem; margin-bottom: 1.5rem;" data-i18n="footer_about">
+            BAUBUND ist Ihr verlässlicher Generalpartner für Handwerks- und Bauprojekte. Deutschlandweiter Rollout ab Metropolregion Stuttgart. Wir verbinden Meisterbetriebe, smarte Baumarkt-Logistik und verbindliche Festpreise.
+          </p>
+          <button class="lang-toggle-btn" aria-label="Sprache wechseln / Switch Language">
+            <span class="lang-opt lang-opt-de active">DE</span>
+            <span class="lang-opt lang-opt-en">EN</span>
+          </button>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title" data-i18n="footer_quicklinks">Schnellzugriff</h4>
+          <div class="footer-links">
+            <a href="index.html" class="footer-link" data-i18n="nav_home">Home</a>
+            <a href="leistungen.html" class="footer-link" data-i18n="nav_services">Gewerke</a>
+            <a href="ablauf.html" class="footer-link" data-i18n="nav_process">Ablauf</a>
+            <a href="partner.html" class="footer-link" data-i18n="nav_partners">Für Partner</a>
+            <a href="rechner.html" class="footer-link" data-i18n="nav_calculator">Kostenrechner</a>
+            <a href="pitch-deck.html" class="footer-link" data-i18n="nav_pitch">B2B Pitch Deck</a>
+            <a href="kontakt.html" class="footer-link" data-i18n="nav_contact">Kontakt</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title" data-i18n="footer_trades">Gewerke</h4>
+          <div class="footer-links">
+            <a href="leistungen.html#sanierung" class="footer-link" data-i18n="tab_1_title">Komplett-Wohnungssanierung</a>
+            <a href="leistungen.html#bad" class="footer-link" data-i18n="tab_2_title">Badsanierung & Sanitär</a>
+            <a href="leistungen.html#boden" class="footer-link" data-i18n="tab_3_title">Hochwertiger Innenausbau & Parkett</a>
+            <a href="leistungen.html#maler" class="footer-link" data-i18n="tab_4_title">Maler- & Spachteltechnik Q3/Q4</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title" data-i18n="contact_info_title">Direkter Draht</h4>
+          <div class="footer-links" style="font-size: 0.875rem;">
+            <p><strong data-i18n="contact_phone_label">Telefon:</strong> <a href="tel:+4971149058230" data-i18n="contact_phone_val">+49 (0) 711 4905 8230</a></p>
+            <p><strong data-i18n="contact_email_label">E-Mail:</strong> <a href="mailto:kontakt@baubund-projekte.de" data-i18n="contact_email_val">kontakt@baubund-projekte.de</a></p>
+            <p><strong data-i18n="contact_hours_label">Erreichbarkeit:</strong> <span data-i18n="contact_hours_val">Mo – Sa: 07:30 – 19:00 Uhr</span></p>
+            <div style="margin-top: 1rem;">
+              <a href="kontakt.html" class="btn btn-primary btn-sm" data-i18n="nav_cta">Projekt anfragen</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span data-i18n="footer_copyright">© 2026 BAUBUND Projektgesellschaft. Alle Rechte vorbehalten.</span>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="kontakt.html" class="footer-link" data-i18n="footer_imprint">Impressum</a>
+          <a href="kontakt.html" class="footer-link" data-i18n="footer_privacy">Datenschutz</a>
+          <a href="kontakt.html" class="footer-link" data-i18n="footer_terms">AGB</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/calculator.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

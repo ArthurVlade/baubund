@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gewerke & Leistungen | BAUBUND</title>
+  <meta name="description" content="Alle handwerklichen Gewerke aus einer Hand: Komplett-Wohnungssanierung, Badsanierung, Parkett, Trockenbau und Malermeisterarbeiten. Festpreise und garantierte Meisterqualität.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <style>:focus-visible { outline: 2px solid #D97706; outline-offset: 2px; }</style>
+</head>
+<body>
+
+  <!-- Floating Capsule Header (Reference 1) -->
+  <header class="site-header">
+    <div class="header-pill">
+      <a href="index.html" class="logo-wrapper">
+        <div class="logo-icon" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="7" height="7"></rect>
+            <rect x="14" y="3" width="7" height="7"></rect>
+            <rect x="14" y="14" width="7" height="7"></rect>
+            <rect x="3" y="14" width="7" height="7"></rect>
+          </svg>
+        </div>
+        <span data-i18n="brand_name">BAUBUND</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Hauptnavigation">
+        <a href="index.html" class="nav-link" data-i18n="nav_home">Home</a>
+        <a href="leistungen.html" class="nav-link active" data-i18n="nav_services">Gewerke</a>
+        <a href="ablauf.html" class="nav-link" data-i18n="nav_process">Ablauf</a>
+        <a href="partner.html" class="nav-link" data-i18n="nav_partners">Für Partner</a>
+        <a href="rechner.html" class="nav-link" data-i18n="nav_calculator">Kostenrechner</a>
+        <a href="pitch-deck.html" class="nav-link" data-i18n="nav_pitch">B2B Pitch Deck</a>
+        <a href="kontakt.html" class="nav-link" data-i18n="nav_contact">Kontakt</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="location-pill" title="Startregion Stuttgart & Deutschlandweiter Rollout">
+          <span class="location-dot"></span>
+          <span data-i18n="nav_location_badge">Stuttgart & bundesweit</span>
+        </div>
+
+        <button class="lang-toggle-btn" aria-label="Sprache wechseln / Switch Language" title="DE / EN">
+          <span class="lang-opt lang-opt-de active">DE</span>
+          <span class="lang-opt lang-opt-en">EN</span>
+        </button>
+
+        <a href="kontakt.html" class="header-cta-btn" data-i18n="nav_cta">Projekt anfragen</a>
+
+        <button class="mobile-menu-toggle" aria-label="Menü öffnen" aria-expanded="false">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Page Header -->
+    <section class="section" style="padding-bottom: 2rem;">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag" data-i18n="nav_services">Gewerke & Leistungen</span>
+          <h1 data-i18n="showcase_section_title">Erstklassige Ausführung für wertsteigernde Projekte</h1>
+          <p class="section-subtitle" data-i18n="showcase_section_subtitle">
+            Wir konzentrieren uns auf renditestarke, qualitätsintensive Gewerke mit höchstem Anspruch an Koordination und Materialqualität.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <div class="pillars-grid" style="grid-template-columns: 1fr 1fr; margin-bottom: 3rem;">
+          <!-- 1: Komplettsanierung -->
+          <div class="pillar-card" id="sanierung">
+            <div class="detail-badge" style="margin-bottom: 0.75rem;">
+              <span class="detail-badge-dot"></span>
+              <span data-i18n="tab_1_badge">Kernkompetenz - Höchste Wertschöpfung</span>
+            </div>
+            <h3 style="font-size: 1.4rem; margin-bottom: 0.5rem;" data-i18n="tab_1_title">Komplett-Wohnungssanierung</h3>
+            <p style="font-size: 0.9375rem; color: var(--color-ink-secondary); margin-bottom: 1.25rem;" data-i18n="tab_1_desc">
+              Von der Entkernung über neue Leitungen, Böden und Wände bis zum fertigen Einzug. Unser Bauleiter steuert alle Gewerke mit verbindlichem Zeitplan.
+            </p>
+            <ul style="font-size: 0.84rem; color: var(--color-ink-muted); display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 1.5rem;">
+              <li>✓ Ein persönlicher Bauleiter vor Ort als alleiniger Ansprechpartner</li>
+              <li>✓ Zentrale Materialbeschaffung (Hornbach, OBI, Fachhandel)</li>
+              <li>✓ Verbindlicher Meilensteinplan mit 5 Jahren Gewährleistung</li>
+            </ul>
+            <a href="kontakt.html?service=full" class="btn btn-secondary btn-sm" data-i18n="tab_1_cta">Sanierung unverbindlich anfragen</a>
+          </div>
+
+          <!-- 2: Bad -->
+          <div class="pillar-card" id="bad">
+            <div class="detail-badge" style="margin-bottom: 0.75rem;">
+              <span class="detail-badge-dot"></span>
+              <span data-i18n="tab_2_badge">Spezialisierung - Feuchtraum-Zertifiziert</span>
+            </div>
+            <h3 style="font-size: 1.4rem; margin-bottom: 0.5rem;" data-i18n="tab_2_title">Badsanierung & Sanitär</h3>
+            <p style="font-size: 0.9375rem; color: var(--color-ink-secondary); margin-bottom: 1.25rem;" data-i18n="tab_2_desc">
+              Fliesenleger, Installateur und Elektriker arbeiten Hand in Hand. Wir verwandeln veraltete Nassräume in moderne Wohlfühlbäder mit bodengleichen Duschen.
+            </p>
+            <ul style="font-size: 0.84rem; color: var(--color-ink-muted); display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 1.5rem;">
+              <li>✓ Verbundabdichtung nach DIN 18534 gegen Wasserschäden</li>
+              <li>✓ Großformatige Fliesen & mitered Jolly-Kanten</li>
+              <li>✓ Moderne Unterputz-Armaturen & Fußbodenerwärmung</li>
+            </ul>
+            <a href="rechner.html" class="btn btn-secondary btn-sm" data-i18n="tab_2_cta">Badprojekt jetzt kalkulieren</a>
+          </div>
+
+          <!-- 3: Boden & Innenausbau -->
+          <div class="pillar-card" id="boden">
+            <div class="detail-badge" style="margin-bottom: 0.75rem;">
+              <span class="detail-badge-dot"></span>
+              <span data-i18n="tab_3_badge">Präzision - Nachhaltige Werkstoffe</span>
+            </div>
+            <h3 style="font-size: 1.4rem; margin-bottom: 0.5rem;" data-i18n="tab_3_title">Hochwertiger Innenausbau & Parkett</h3>
+            <p style="font-size: 0.9375rem; color: var(--color-ink-secondary); margin-bottom: 1.25rem;" data-i18n="tab_3_desc">
+              Maßgeschneiderte Trockenbauwände für neue Raumkonzepte kombiniert mit professionell verlegtem Parkett, Landhausdielen oder strapazierfähigem Design-Vinyl.
+            </p>
+            <ul style="font-size: 0.84rem; color: var(--color-ink-muted); display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 1.5rem;">
+              <li>✓ Faserverstärkter Untergrundausgleich für planebene Böden</li>
+              <li>✓ Akustisch entkoppelte Trockenbau-Ständerwände</li>
+              <li>✓ Direkte Baustellenanlieferung ohne Transportaufwand</li>
+            </ul>
+            <a href="kontakt.html?service=floor" class="btn btn-secondary btn-sm" data-i18n="tab_3_cta">Boden & Innenausbau anfragen</a>
+          </div>
+
+          <!-- 4: Maler & Q4 -->
+          <div class="pillar-card" id="maler">
+            <div class="detail-badge" style="margin-bottom: 0.75rem;">
+              <span class="detail-badge-dot"></span>
+              <span data-i18n="tab_4_badge">Oberflächen-Finish - Höchste Qualitätsstufe</span>
+            </div>
+            <h3 style="font-size: 1.4rem; margin-bottom: 0.5rem;" data-i18n="tab_4_title">Maler- & Spachteltechnik Q3/Q4</h3>
+            <p style="font-size: 0.9375rem; color: var(--color-ink-secondary); margin-bottom: 1.25rem;" data-i18n="tab_4_desc">
+              Hochwertiges Spachteln auf Q3/Q4-Niveau, verzugsfreie Malervlies-Montage und langlebige Anstriche mit emissionsarmen Silikat- und Premiumfarben.
+            </p>
+            <ul style="font-size: 0.84rem; color: var(--color-ink-muted); display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 1.5rem;">
+              <li>✓ Staubarmes Maschinenschleifen & Streiflichtprüfung</li>
+              <li>✓ Rissüberbrückendes Malervlies für glatte Wandflächen</li>
+              <li>✓ Atmungsaktive Silikatfarben für optimales Raumklima</li>
+            </ul>
+            <a href="kontakt.html?service=paint" class="btn btn-secondary btn-sm" data-i18n="tab_4_cta">Malerarbeiten anfragen</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comparison Table Section -->
+    <section class="section section-muted">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag" data-i18n="trust_fixed_price">Festpreisgarantie</span>
+          <h2 data-i18n="comparison_title">Der direkte Vergleich: Eigenregie vs. BAUBUND</h2>
+          <p class="section-subtitle">
+            Warum über 80% der privaten Bauherren bei getrennter Beauftragung Mehrkosten und Verzögerungen erleiden:
+          </p>
+        </div>
+
+        <div class="comparison-wrapper">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th data-i18n="comp_col_metric">Projektkriterium</th>
+                <th data-i18n="comp_col_diy">In Eigenregie (Mehrere Firmen)</th>
+                <th class="table-highlight" data-i18n="comp_col_baubund">Mit BAUBUND Generalpartner</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong data-i18n="comp_row_contacts">Ansprechpartner</strong></td>
+                <td class="table-badge-bad" data-i18n="comp_row_contacts_diy">3–7 verschiedene Handwerker gleichzeitig</td>
+                <td class="table-highlight table-badge-good" data-i18n="comp_row_contacts_bb">1 persönlicher Projektkoordinator</td>
+              </tr>
+              <tr>
+                <td><strong data-i18n="comp_row_materials">Materialbeschaffung</strong></td>
+                <td class="table-badge-bad" data-i18n="comp_row_materials_diy">Selbst kaufen, schleppen, Verschnittrisiko</td>
+                <td class="table-highlight table-badge-good" data-i18n="comp_row_materials_bb">Zentral disponiert & termingerecht geliefert</td>
+              </tr>
+              <tr>
+                <td><strong data-i18n="comp_row_schedule">Terminkoordination</strong></td>
+                <td class="table-badge-bad" data-i18n="comp_row_schedule_diy">Verzögerungen, wenn ein Gewerk ausfällt</td>
+                <td class="table-highlight table-badge-good" data-i18n="comp_row_schedule_bb">Synchronized trade scheduling with timeline guarantee</td>
+              </tr>
+              <tr>
+                <td><strong data-i18n="comp_row_liability">Gewährleistung & Haftung</strong></td>
+                <td class="table-badge-bad" data-i18n="comp_row_liability_diy">Gewerke schieben sich Fehler gegenseitig zu</td>
+                <td class="table-highlight table-badge-good" data-i18n="comp_row_liability_bb">Gesamthaftung & 5 Jahre Gewährleistung</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div style="margin-top: 2.5rem; text-align: center;">
+          <a href="rechner.html" class="btn btn-amber btn-lg" data-i18n="cta_calculate_now">Kosten jetzt berechnen</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="logo-wrapper" style="margin-bottom: 1rem;">
+            <div class="logo-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="7" height="7"></rect>
+                <rect x="14" y="3" width="7" height="7"></rect>
+                <rect x="14" y="14" width="7" height="7"></rect>
+                <rect x="3" y="14" width="7" height="7"></rect>
+              </svg>
+            </div>
+            <span data-i18n="brand_name">BAUBUND</span>
+          </div>
+          <p style="font-size: 0.875rem; margin-bottom: 1.5rem;" data-i18n="footer_about">
+            BAUBUND ist Ihr verlässlicher Generalpartner für Handwerks- und Bauprojekte. Deutschlandweiter Rollout ab Metropolregion Stuttgart. Wir verbinden Meisterbetriebe, smarte Baumarkt-Logistik und verbindliche Festpreise.
+          </p>
+          <button class="lang-toggle-btn" aria-label="Sprache wechseln / Switch Language">
+            <span class="lang-opt lang-opt-de active">DE</span>
+            <span class="lang-opt lang-opt-en">EN</span>
+          </button>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title" data-i18n="footer_quicklinks">Schnellzugriff</h4>
+          <div class="footer-links">
+            <a href="index.html" class="footer-link" data-i18n="nav_home">Home</a>
+            <a href="leistungen.html" class="footer-link" data-i18n="nav_services">Gewerke</a>
+            <a href="ablauf.html" class="footer-link" data-i18n="nav_process">Ablauf</a>
+            <a href="partner.html" class="footer-link" data-i18n="nav_partners">Für Partner</a>
+            <a href="rechner.html" class="footer-link" data-i18n="nav_calculator">Kostenrechner</a>
+            <a href="pitch-deck.html" class="footer-link" data-i18n="nav_pitch">B2B Pitch Deck</a>
+            <a href="kontakt.html" class="footer-link" data-i18n="nav_contact">Kontakt</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title" data-i18n="footer_trades">Gewerke</h4>
+          <div class="footer-links">
+            <a href="leistungen.html#sanierung" class="footer-link" data-i18n="tab_1_title">Komplett-Wohnungssanierung</a>
+            <a href="leistungen.html#bad" class="footer-link" data-i18n="tab_2_title">Badsanierung & Sanitär</a>
+            <a href="leistungen.html#boden" class="footer-link" data-i18n="tab_3_title">Hochwertiger Innenausbau & Parkett</a>
+            <a href="leistungen.html#maler" class="footer-link" data-i18n="tab_4_title">Maler- & Spachteltechnik Q3/Q4</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title" data-i18n="contact_info_title">Direkter Draht</h4>
+          <div class="footer-links" style="font-size: 0.875rem;">
+            <p><strong data-i18n="contact_phone_label">Telefon:</strong> <a href="tel:+4971149058230" data-i18n="contact_phone_val">+49 (0) 711 4905 8230</a></p>
+            <p><strong data-i18n="contact_email_label">E-Mail:</strong> <a href="mailto:kontakt@baubund-projekte.de" data-i18n="contact_email_val">kontakt@baubund-projekte.de</a></p>
+            <p><strong data-i18n="contact_hours_label">Erreichbarkeit:</strong> <span data-i18n="contact_hours_val">Mo – Sa: 07:30 – 19:00 Uhr</span></p>
+            <div style="margin-top: 1rem;">
+              <a href="kontakt.html" class="btn btn-primary btn-sm" data-i18n="nav_cta">Projekt anfragen</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span data-i18n="footer_copyright">© 2026 BAUBUND Projektgesellschaft. Alle Rechte vorbehalten.</span>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="kontakt.html" class="footer-link" data-i18n="footer_imprint">Impressum</a>
+          <a href="kontakt.html" class="footer-link" data-i18n="footer_privacy">Datenschutz</a>
+          <a href="kontakt.html" class="footer-link" data-i18n="footer_terms">AGB</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

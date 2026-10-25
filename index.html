@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BAUBUND | Handwerk, Material & Baukoordination aus einer Hand</title>
+  <meta name="description" content="Kein Handwerker-Chaos mehr. BAUBUND koordiniert geprüfte Fachbetriebe, beschafft Baumarkt- und Profimaterialien und garantiert verlässliche Festpreise.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <style>:focus-visible { outline: 2px solid #D97706; outline-offset: 2px; }</style>
+</head>
+<body>
+
+  <!-- Floating Capsule Header (Reference 1) -->
+  <header class="site-header">
+    <div class="header-pill">
+      <a href="index.html" class="logo-wrapper">
+        <div class="logo-icon" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="7" height="7"></rect>
+            <rect x="14" y="3" width="7" height="7"></rect>
+            <rect x="14" y="14" width="7" height="7"></rect>
+            <rect x="3" y="14" width="7" height="7"></rect>
+          </svg>
+        </div>
+        <span data-i18n="brand_name">BAUBUND</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Hauptnavigation">
+        <a href="index.html" class="nav-link active" data-i18n="nav_home">Home</a>
+        <a href="leistungen.html" class="nav-link" data-i18n="nav_services">Gewerke</a>
+        <a href="ablauf.html" class="nav-link" data-i18n="nav_process">Ablauf</a>
+        <a href="partner.html" class="nav-link" data-i18n="nav_partners">Für Partner</a>
+        <a href="rechner.html" class="nav-link" data-i18n="nav_calculator">Kostenrechner</a>
+        <a href="pitch-deck.html" class="nav-link" data-i18n="nav_pitch">B2B Pitch Deck</a>
+        <a href="kontakt.html" class="nav-link" data-i18n="nav_contact">Kontakt</a>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Location Pill -->
+        <div class="location-pill" title="Startregion Stuttgart & Deutschlandweiter Rollout">
+          <span class="location-dot"></span>
+          <span data-i18n="nav_location_badge">Stuttgart & bundesweit</span>
+        </div>
+
+        <!-- Language Switcher Pill -->
+        <button class="lang-toggle-btn" aria-label="Sprache wechseln / Switch Language" title="DE / EN">
+          <span class="lang-opt lang-opt-de active">DE</span>
+          <span class="lang-opt lang-opt-en">EN</span>
+        </button>
+
+        <a href="kontakt.html" class="header-cta-btn" data-i18n="nav_cta">Projekt anfragen</a>
+
+        <button class="mobile-menu-toggle" aria-label="Menü öffnen" aria-expanded="false">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container hero-layout">
+        <div class="hero-content">
+          <span class="section-tag" data-i18n="hero_badge">Deutschlandweiter Rollout, Startregion Stuttgart</span>
+          <h1 data-i18n="hero_title">Kein Handwerker-Chaos mehr. Ein Ansprechpartner für Ihr gesamtes Projekt.</h1>
+          <p class="hero-lead" data-i18n="hero_subtitle">
+            Ob anspruchsvolle Wohnungssanierung, Badumbau oder hochwertiger Innenausbau: Wir koordinieren qualifizierte Meisterbetriebe, beschaffen alle Baumarkt- und Profimaterialien und garantieren verbindliche Festpreise.
+          </p>
+          <div class="hero-actions">
+            <a href="rechner.html" class="btn btn-amber btn-lg" data-i18n="cta_calculate_now">Kosten jetzt berechnen</a>
+            <a href="kontakt.html" class="btn btn-secondary btn-lg" data-i18n="cta_request_quote">Kostenloses Angebot anfordern</a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-val" data-i18n="hero_stat_1_val">100%</span>
+              <span class="stat-label" data-i18n="hero_stat_1_txt">Verlässliche Festpreise ohne Nachforderungen</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-val" data-i18n="hero_stat_2_val">1 Ansprechpartner</span>
+              <span class="stat-label" data-i18n="hero_stat_2_txt">Statt Dutzende Firmen einzeln zu koordinieren</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-val" data-i18n="hero_stat_3_val">Geprüfte Qualität</span>
+              <span class="stat-label" data-i18n="hero_stat_3_txt">Zertifizierte Fachhandwerker und Meisterbetriebe</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="hero-card-header">
+            <h3 class="hero-card-title" data-i18n="pillars_title">Die neue Art, Handwerks- und Bauprojekte umzusetzen</h3>
+            <p class="hero-card-desc" data-i18n="hero_badge">Deutschlandweiter Rollout, Startregion Stuttgart</p>
+          </div>
+          <div class="trust-checklist">
+            <div class="trust-item">
+              <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span data-i18n="trust_fixed_price">Festpreisgarantie</span>
+            </div>
+            <div class="trust-item">
+              <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span data-i18n="trust_licensed_pros">Geprüfte Meister- & Fachbetriebe</span>
+            </div>
+            <div class="trust-item">
+              <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span data-i18n="trust_materials">Qualitätsbaustoffe inklusive</span>
+            </div>
+            <div class="trust-item">
+              <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span data-i18n="trust_insured">Bis 5 Mio. € vollversichert</span>
+            </div>
+          </div>
+          <a href="rechner.html" class="btn btn-outline" style="width: 100%;" data-i18n="calc_cta_start">Zum Kostenrechner</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust Bar -->
+    <div class="trust-bar">
+      <div class="container trust-bar-grid">
+        <div class="trust-badge">
+          <svg class="trust-badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          </svg>
+          <span data-i18n="trust_insured">Bis 5 Mio. € vollversichert</span>
+        </div>
+        <div class="trust-badge">
+          <svg class="trust-badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
+          </svg>
+          <span data-i18n="trust_fixed_price">Festpreisgarantie</span>
+        </div>
+        <div class="trust-badge">
+          <svg class="trust-badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+          </svg>
+          <span data-i18n="trust_licensed_pros">Geprüfte Meister- & Fachbetriebe</span>
+        </div>
+        <div class="trust-badge">
+          <svg class="trust-badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+          </svg>
+          <span data-i18n="trust_materials">Qualitätsbaustoffe inklusive</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3 Pillars Section -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header centered">
+          <span class="section-tag" data-i18n="nav_process">Konzept & Ablauf</span>
+          <h2 data-i18n="pillars_title">Die neue Art, Handwerks- und Bauprojekte umzusetzen</h2>
+          <p class="section-subtitle" data-i18n="pillars_subtitle">
+            Herkömmliche Sanierungen scheitern meist an schlechter Absprache zwischen Gewerken, teuren Materialfehlern und zeitraubender Organisation. BAUBUND löst diese Probleme von Grund auf.
+          </p>
+        </div>
+
+        <div class="pillars-grid">
+          <div class="pillar-card">
+            <div class="pillar-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <h3 class="pillar-title" data-i18n="pillar_1_title">Zentrale Projektorganisation</h3>
+            <p class="pillar-desc" data-i18n="pillar_1_desc">
+              Sie müssen nicht Elektriker, Fliesenleger und Maler einzeln suchen. Wir takten alle Gewerke in enger Abstimmung aufeinander ab und überwachen die Baustelle.
+            </p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="1" y="3" width="15" height="13"></rect>
+                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                <circle cx="18.5" cy="18.5" r="2.5"></circle>
+              </svg>
+            </div>
+            <h3 class="pillar-title" data-i18n="pillar_2_title">Direkte Materialbeschaffung</h3>
+            <p class="pillar-desc" data-i18n="pillar_2_desc">
+              Durch Partnerschaften mit führenden Baumärkten (wie Hornbach, OBI, Bauhaus) und Baustoffhändlern liefern wir Profimaterial pünktlich und ohne unnötige Aufschläge.
+            </p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2v20"></path>
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+              </svg>
+            </div>
+            <h3 class="pillar-title" data-i18n="pillar_3_title">Verbindlicher Festpreis & Garantie</h3>
+            <p class="pillar-desc" data-i18n="pillar_3_desc">
+              Keine bösen Überraschungen bei der Schlussrechnung. Vor Arbeitsbeginn steht der transparente Gesamtpreis fest. Sie zahlen erst bei sauberer Abnahme.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- High-Margin Showcase Section (Reference 2 Info Box UI) -->
+    <section class="section section-muted">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag" data-i18n="showcase_section_tag">Fokus-Gewerke & Kernkompetenzen</span>
+          <h2 data-i18n="showcase_section_title">Erstklassige Ausführung für wertsteigernde Projekte</h2>
+          <p class="section-subtitle" data-i18n="showcase_section_subtitle">
+            Wir konzentrieren uns auf renditestarke, qualitätsintensive Gewerke mit höchstem Anspruch an Koordination und Materialqualität.
+          </p>
+        </div>
+
+        <div class="showcase-layout">
+          <!-- Left Tab Column -->
+          <div class="showcase-nav" role="tablist">
+            <!-- Tab 1 -->
+            <button type="button" class="showcase-tab-btn active" data-target-tab="tab-content-1" role="tab" aria-selected="true">
+              <div class="tab-left">
+                <div class="tab-icon-box" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                  </svg>
+                </div>
+                <div>
+                  <div class="tab-title" data-i18n="tab_1_title">Komplett-Wohnungssanierung</div>
+                  <div class="tab-subtitle" data-i18n="tab_1_sub">Schlüsselfertig, Alle Gewerke</div>
+                </div>
+              </div>
+              <span class="tab-arrow">→</span>
+            </button>
+
+            <!-- Tab 2 -->
+            <button type="button" class="showcase-tab-btn" data-target-tab="tab-content-2" role="tab" aria-selected="false">
+              <div class="tab-left">
+                <div class="tab-icon-box" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 12v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6"></path>
+                    <path d="M2 12h20"></path>
+                    <path d="M7 4h10"></path>
+                    <path d="M12 4v8"></path>
+                  </svg>
+                </div>
+                <div>
+                  <div class="tab-title" data-i18n="tab_2_title">Badsanierung & Sanitär</div>
+                  <div class="tab-subtitle" data-i18n="tab_2_sub">Barrierefrei, Fliesen & Sanitär</div>
+                </div>
+              </div>
+              <span class="tab-arrow">→</span>
+            </button>
+
+            <!-- Tab 3 -->
+            <button type="button" class="showcase-tab-btn" data-target-tab="tab-content-3" role="tab" aria-selected="false">
+              <div class="tab-left">
+                <div class="tab-icon-box" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                    <path d="M3 9h18"></path>
+                    <path d="M3 15h18"></path>
+                    <path d="M9 3v18"></path>
+                    <path d="M15 3v18"></path>
+                  </svg>
+                </div>
+                <div>
+                  <div class="tab-title" data-i18n="tab_3_title">Hochwertiger Innenausbau & Parkett</div>
+                  <div class="tab-subtitle" data-i18n="tab_3_sub">Echtholz, Vinyl & Trockenbau</div>
+                </div>
+              </div>
+              <span class="tab-arrow">→</span>
+            </button>
+
+            <!-- Tab 4 -->
+            <button type="button" class="showcase-tab-btn" data-target-tab="tab-content-4" role="tab" aria-selected="false">
+              <div class="tab-left">
+                <div class="tab-icon-box" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 11V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h3"></path>
+                    <path d="M14 22v-6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v6"></path>
+                    <path d="M18 14v4"></path>
+                  </svg>
+                </div>
+                <div>
+                  <div class="tab-title" data-i18n="tab_4_title">Maler- & Spachteltechnik Q3/Q4</div>
+                  <div class="tab-subtitle" data-i18n="tab_4_sub">Glattputz, Vlies & Lackierungen</div>
+                </div>
+              </div>
+              <span class="tab-arrow">→</span>
+            </button>
+          </div>
+
+          <!-- Right Detail Card (Matching Reference 2) -->
+          <div class="showcase-detail-card">
+            <!-- Panel 1: Komplettsanierung -->
+            <div class="showcase-detail-panel active" id="tab-content-1">
+              <div class="detail-badge">
+                <span class="detail-badge-dot"></span>
+                <span data-i18n="tab_1_badge">Kernkompetenz, Höchste Wertschöpfung</span>
+              </div>
+              <h3 class="detail-title" data-i18n="tab_1_heading">Ganzheitliche Sanierung aus einer Meisterhand</h3>
+              <p class="detail-desc" data-i18n="tab_1_desc">
+                Von der Entkernung über neue Leitungen, Böden und Wände bis zum fertigen Einzug. Unser Bauleiter steuert alle Gewerke mit verbindlichem Zeitplan.
+              </p>
+
+              <!-- Impact Callout Box -->
+              <div class="impact-callout-box">
+                <div class="impact-icon-badge" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                  </svg>
+                </div>
+                <div>
+                  <span class="impact-meta" data-i18n="tab_1_impact_meta">ZEIT- & KOSTENVORTEIL</span>
+                  <div class="impact-text" data-i18n="tab_1_impact_text">Bis zu 35% kürzere Bauzeit durch lückenlose Gewerke-Taktung</div>
+                </div>
+              </div>
+
+              <div class="capabilities-title" data-i18n="tab_1_cap_title">LEISTUNGSUMFANG & MEISTERQUALITÄT</div>
+              <div class="capabilities-list">
+                <div class="capability-item">
+                  <svg class="capability-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  </svg>
+                  <span data-i18n="tab_1_cap_1">Komplette Projektleitung mit einem festen Ansprechpartner vor Ort</span>
+                </div>
+                <div class="capability-item">
+                  <svg class="capability-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  </svg>
+                  <span data-i18n="tab_1_cap_2">Zentrale Materialdisposition direkt über Großhandel & Baumarkt-Kontingente</span>
+                </div>
+                <div class="capability-item">
+                  <svg class="capability-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  </svg>
+                  <span data-i18n="tab_1_cap_3">Feste Fertigstellungstermine mit garantierter Endabnahme</span>
+                </div>
+                <div class="capability-item">
+                  <svg class="capability-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  </svg>
+                  <span data-i18n="tab_1_cap_4">Umfassende Gesamthaftung und 5 Jahre Gewährleistung nach BGB</span>
+                </div>
+              </div>
+
+              <div class="showcase-footer">
+                <span class="showcase-footer-meta" data-i18n="tab_1_footer_meta">Schlüsselfertig, Materiallogistik, Meisterabnahme</span>
+                <a href="kontakt.html?service=full" class="btn btn-primary" data-i18n="tab_1_cta">Sanierung unverbindlich anfragen</a>
+              </div>
+            </div>
+
+            <!-- Panel 2: Bad -->
+            <div class="showcase-detail-panel" id="tab-content-2">
+              <div class="detail-badge">
+                <span class="detail-badge-dot"></span>
+                <span data-i18n="tab_2_badge">Spezialisierung, Feuchtraum-Zertifiziert</span>
+              </div>
+              <h3 class="detail-title" data-i18n="tab_2_heading">Moderne Bäder ohne Koordinationsaufwand</h3>
+              <p class="detail-desc" data-i18n="tab_2_desc">
+                Fliesenleger, Installateur und Elektriker arbeiten Hand in Hand. Wir verwandeln veraltete Nassräume in moderne Wohlfühlbäder mit bodengleichen Duschen.
+              </p>
+
+              <div class="impact-callout-box">
+                <div class="impact-icon-badge" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                </div>
+                <div>
+                  <span class="impact-meta" data-i18n="tab_2_impact_meta">FESTPREIS-SICHERHEIT</span>
+                  <div class="impact-text" data-i18n="tab_2_impact_text">Verbindlicher Pauschalpreis inklusive aller Sanitär- und Fliesenmaterialien</div>
+                </div>
+              </div>
+
+              <div class="capabilities-title" data-i18n="tab_2_cap_title">LEISTUNGSUMFANG & MEISTERQUALITÄT</div>
+              <div class="capabilities-list">
+                <div class="capability-item">
+                  <svg class="capability-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  </svg>
+                  <span data-i18n="tab_2_cap_1">Fachgerechte Verbundabdichtung nach DIN 18534 gegen Feuchteschäden</span>
+                </div>
+                <div class="capability-item">
+                  <svg class="capability-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  </svg>
+                  <span data-i18n="tab_2_cap_2">Großformatige Fliesenverlegung und präzise Gehrungsschnitte (Jolly-Kanten)</span>
+                </div>
+                <div class="capability-item">
+                  <svg class="capability-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  </svg>
+                  <span data-i18n="tab_2_cap_3">Installation moderner Unterputz-Armaturen und Fußbodenerwärmung</span>
+                </div>
+                <div class="capability-item">
+                  <svg class="capability-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  </svg>
+                  <span data-i18n="tab_2_cap_4">Staubschutzwände und Luftreinigung während der gesamten Bauphase</span>
+                </div>
+              </div>
+
+              <div class="showcase-footer">
+                <span class="showcase-footer-meta" data-i18n="tab_2_footer_meta">Planung, Sanitärtechnik, Fliesenmeister</span>
+                <a href="rechner.html" class="btn btn-primary" data-i18n="tab_2_cta">Badprojekt jetzt kalkulieren</a>
+              </div>
+            </div>
+
+            <!-- Panel 3: Innenausbau & Parkett -->
+            <div class="showcase-detail-panel" id="tab-content-3">
+              <div class="detail-badge">
+                <span class="detail-badge-dot"></span>
+                <span data-i18n="tab_3_badge">Präzision, Nachhaltige Werkstoffe</span>
+              </div>
+              <h3 class="detail-title" data-i18n="tab_3_heading">Böden und Raumaufteilung in Vollendung</h3>
+              <p class="detail-desc" data-i18n="tab_3_desc">
+                Maßgeschneiderte Trockenbauwände für neue Raumkonzepte kombiniert mit professionell verlegtem Parkett, Landhausdielen oder strapazierfähigem Design-Vinyl.
+              </p>
+
+              <div class="impact-callout-box">
+                <div class="impact-icon-badge" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="1" y="3" width="15" height="13"></rect>
+                    <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                  </svg>
+                </div>
+                <div>
+                  <span class="impact-meta" data-i18n="tab_3_impact_meta">MATERIALVORTEIL</span>
+                  <div class="impact-text" data-i18n="tab_3_impact_text">Direktbelieferung ab Baumarkt / Großlager ohne Schleppen oder Verschnittverlust</div>
+                </div>
+              </div>
+
+              <div class="capabilities-title" data-i18n="tab_3_cap_title">LEISTUNGSUMFANG & MEISTERQUALITÄT</div>
+              <div class="capabilities-list">
+                <div class="capability-item">
+                  <svg class="capability-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  </svg>
+                  <span data-i18n="tab_3_cap_1">Professioneller Untergrundausgleich mit faserverstärkter Fließspachtelmasse</span>
+                </div>
+                <div class="capability-item">
+                  <svg class="capability-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  </svg>
+                  <span data-i18n="tab_3_cap_2">Verklebung oder schwimmende Verlegung mit integriertem Schallschutz</span>
+                </div>
+                <div class="capability-item">
+                  <svg class="capability-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  </svg>
+                  <span data-i18n="tab_3_cap_3">Schalloptimierte Trockenbau-Ständerwände nach GEG-Dämmstandards</span>
+                </div>
+                <div class="capability-item">
+                  <svg class="capability-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  </svg>
+                  <span data-i18n="tab_3_cap_4">Perfekt montierte Sockelleisten und saubere Übergangsschienen</span>
+                </div>
+              </div>
+
+              <div class="showcase-footer">
+                <span class="showcase-footer-meta" data-i18n="tab_3_footer_meta">Echtholz, Designböden, Akustikdecken</span>
+                <a href="kontakt.html?service=floor" class="btn btn-primary" data-i18n="tab_3_cta">Boden & Innenausbau anfragen</a>
+              </div>
+            </div>
+
+            <!-- Panel 4: Maler & Q4 -->
+            <div class="showcase-detail-panel" id="tab-content-4">
+              <div class="detail-badge">
+                <span class="detail-badge-dot"></span>
+                <span data-i18n="tab_4_badge">Oberflächen-Finish, Höchste Qualitätsstufe</span>
+              </div>
+              <h3 class="detail-title" data-i18n="tab_4_heading">Makellose Oberflächen ohne Streiflichteffekte</h3>
+              <p class="detail-desc" data-i18n="tab_4_desc">
+                Hochwertiges Spachteln auf Q3/Q4-Niveau, verzugsfreie Malervlies-Montage und langlebige Anstriche mit emissionsarmen Silikat- und Premiumfarben.
+              </p>
+
+              <div class="impact-callout-box">
+                <div class="impact-icon-badge" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                  </svg>
+                </div>
+                <div>
+                  <span class="impact-meta" data-i18n="tab_4_impact_meta">QUALITÄTSGARANTIE</span>
+                  <div class="impact-text" data-i18n="tab_4_impact_text">Staubarmes Maschinenschleifen & gleichmäßige Streiflicht-Prüfung</div>
+                </div>
+              </div>
+
+              <div class="capabilities-title" data-i18n="tab_4_cap_title">LEISTUNGSUMFANG & MEISTERQUALITÄT</div>
+              <div class="capabilities-list">
+                <div class="capability-item">
+                  <svg class="capability-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  </svg>
+                  <span data-i18n="tab_4_cap_1">Vollflächiges Spachteln und Glätten für anspruchsvolle Architekturbeleuchtung</span>
+                </div>
+                <div class="capability-item">
+                  <svg class="capability-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  </svg>
+                  <span data-i18n="tab_4_cap_2">Rissüberbrückendes Renoviervlies für dauerhaft glatte Wandflächen</span>
+                </div>
+                <div class="capability-item">
+                  <svg class="capability-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  </svg>
+                  <span data-i18n="tab_4_cap_3">Spritzlackierung von Türen, Zargen und Heizkörpern in Profiqualität</span>
+                </div>
+                <div class="capability-item">
+                  <svg class="capability-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  </svg>
+                  <span data-i18n="tab_4_cap_4">Atmungsaktive, lösemittelfreie Farben für ein gesundes Raumklima</span>
+                </div>
+              </div>
+
+              <div class="showcase-footer">
+                <span class="showcase-footer-meta" data-i18n="tab_4_footer_meta">Q4-Finish, Silikatfarben, Malermeister</span>
+                <a href="kontakt.html?service=paint" class="btn btn-primary" data-i18n="tab_4_cta">Malerarbeiten anfragen</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4 Steps Workflow -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag" data-i18n="workflow_title">In 4 klaren Schritten zum fertigen Projekt</span>
+          <h2 data-i18n="workflow_title">In 4 klaren Schritten zum fertigen Projekt</h2>
+          <p class="section-subtitle" data-i18n="workflow_subtitle">
+            Transparent, verlässlich und ohne Stress für Sie als Auftraggeber.
+          </p>
+        </div>
+
+        <div class="workflow-timeline">
+          <div class="step-card">
+            <div class="step-header">
+              <span class="step-badge" data-i18n="step_1_num">Schritt 1</span>
+            </div>
+            <h3 class="step-title" data-i18n="step_1_title">Anfrage & Vor-Ort-Besichtigung</h3>
+            <p class="step-desc" data-i18n="step_1_desc">
+              Sie schildern Ihr Vorhaben online oder per Telefon. Bei Bedarf prüfen wir die Gegebenheiten vor Ort kostenfrei.
+            </p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <span class="step-badge" data-i18n="step_2_num">Schritt 2</span>
+            </div>
+            <h3 class="step-title" data-i18n="step_2_title">Verbindliches Festpreisangebot</h3>
+            <p class="step-desc" data-i18n="step_2_desc">
+              Sie erhalten ein transparentes Angebot mit Materialauswahl, Ausführungszeitraum und garantierten Kosten.
+            </p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <span class="step-badge" data-i18n="step_3_num">Schritt 3</span>
+            </div>
+            <h3 class="step-title" data-i18n="step_3_title">Materiallieferung & Ausführung</h3>
+            <p class="step-desc" data-i18n="step_3_desc">
+              Wir liefern alle Materialien auf die Baustelle. Unsere geprüften Fachhandwerker starten pünktlich und arbeiten gewerkübergreifend.
+            </p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <span class="step-badge" data-i18n="step_4_num">Schritt 4</span>
+            </div>
+            <h3 class="step-title" data-i18n="step_4_title">Gemeinsame Abnahme & Garantie</h3>
+            <p class="step-desc" data-i18n="step_4_desc">
+              Erst wenn alles makellos ausgeführt und gereinigt ist, erfolgt die offizielle Abnahme inklusive Gewährleistung.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Material Feature Banner -->
+    <section class="container" style="margin-bottom: 5rem;">
+      <div class="material-feature-box">
+        <div>
+          <h2 class="material-feature-title">Direkte Baumarkt- & Fachhandelslogistik</h2>
+          <p class="material-feature-desc">
+            Kein Schleppen, keine falschen Schrauben. Wir bestellen passende Qualitätsbaustoffe direkt über unsere Partnerkontingente (Baumärkte wie Hornbach, OBI, Bauhaus & Baustofffachhandel) und bringen alles auf die Baustelle.
+          </p>
+          <div style="margin-top: 1.5rem;">
+            <a href="rechner.html" class="btn btn-amber" data-i18n="cta_calculate_now">Kosten jetzt berechnen</a>
+          </div>
+        </div>
+        <div>
+          <p style="font-size: 0.8125rem; text-transform: uppercase; letter-spacing: 0.05em; color: #94A3B8; margin-bottom: 0.75rem;">Material- & Handelskooperationen</p>
+          <div class="store-partners-list">
+            <span class="store-tag">Hornbach Baumarkt</span>
+            <span class="store-tag">OBI Fachmarkt</span>
+            <span class="store-tag">Bauhaus</span>
+            <span class="store-tag">Baustoff-Fachhandel</span>
+            <span class="store-tag">Meister-Großhandel</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="section section-muted" style="text-align: center;">
+      <div class="container" style="max-width: 700px;">
+        <span class="section-tag" data-i18n="calc_teaser_title">Interaktiver Projekt- & Kostenrechner</span>
+        <h2 style="margin-bottom: 1rem;" data-i18n="calc_teaser_title">Interaktiver Projekt- & Kostenrechner</h2>
+        <p style="margin-bottom: 2rem; font-size: 1.125rem;" data-i18n="calc_teaser_subtitle">
+          Kalkulieren Sie in 60 Sekunden eine erste Kostenschätzung für Ihr Vorhaben – inklusive Material und Arbeitszeit.
+        </p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <a href="rechner.html" class="btn btn-primary btn-lg" data-i18n="calc_cta_start">Zum Kostenrechner</a>
+          <a href="kontakt.html" class="btn btn-secondary btn-lg" data-i18n="cta_contact_us">Beratungsgespräch vereinbaren</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Floating Cookie & Privacy Consent Banner -->
+  <div class="cookie-banner" id="cookie-consent-banner" role="dialog" aria-labelledby="cookie-title">
+    <div class="cookie-title" id="cookie-title" data-i18n="cookie_title">Privatsphäre & Einstellungen</div>
+    <p class="cookie-desc" data-i18n="cookie_desc">
+      Wir nutzen ausschließlich technisch essenzielle Cookies, um Grundfunktionen wie Ihre Spracheinstellungen zu speichern. Es werden keine externen Werbe-Tracker geladen.
+    </p>
+    <div class="cookie-actions">
+      <a href="kontakt.html" class="cookie-privacy-link" data-i18n="cookie_privacy_link">Datenschutzerklärung</a>
+      <button type="button" class="btn btn-primary btn-sm" id="cookie-accept-btn" data-i18n="cookie_accept">Verstanden & Speichern</button>
+    </div>
+  </div>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="logo-wrapper" style="margin-bottom: 1rem;">
+            <div class="logo-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="7" height="7"></rect>
+                <rect x="14" y="3" width="7" height="7"></rect>
+                <rect x="14" y="14" width="7" height="7"></rect>
+                <rect x="3" y="14" width="7" height="7"></rect>
+              </svg>
+            </div>
+            <span data-i18n="brand_name">BAUBUND</span>
+          </div>
+          <p style="font-size: 0.875rem; margin-bottom: 1.5rem;" data-i18n="footer_about">
+            BAUBUND ist Ihr verlässlicher Generalpartner für Handwerks- und Bauprojekte. Deutschlandweiter Rollout ab Metropolregion Stuttgart. Wir verbinden Meisterbetriebe, smarte Baumarkt-Logistik und verbindliche Festpreise.
+          </p>
+          <button class="lang-toggle-btn" aria-label="Sprache wechseln / Switch Language">
+            <span class="lang-opt lang-opt-de active">DE</span>
+            <span class="lang-opt lang-opt-en">EN</span>
+          </button>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title" data-i18n="footer_quicklinks">Schnellzugriff</h4>
+          <div class="footer-links">
+            <a href="index.html" class="footer-link" data-i18n="nav_home">Home</a>
+            <a href="leistungen.html" class="footer-link" data-i18n="nav_services">Gewerke</a>
+            <a href="ablauf.html" class="footer-link" data-i18n="nav_process">Ablauf</a>
+            <a href="partner.html" class="footer-link" data-i18n="nav_partners">Für Partner</a>
+            <a href="rechner.html" class="footer-link" data-i18n="nav_calculator">Kostenrechner</a>
+            <a href="pitch-deck.html" class="footer-link" data-i18n="nav_pitch">B2B Pitch Deck</a>
+            <a href="kontakt.html" class="footer-link" data-i18n="nav_contact">Kontakt</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title" data-i18n="footer_trades">Gewerke</h4>
+          <div class="footer-links">
+            <a href="leistungen.html#sanierung" class="footer-link" data-i18n="tab_1_title">Komplett-Wohnungssanierung</a>
+            <a href="leistungen.html#bad" class="footer-link" data-i18n="tab_2_title">Badsanierung & Sanitär</a>
+            <a href="leistungen.html#boden" class="footer-link" data-i18n="tab_3_title">Hochwertiger Innenausbau & Parkett</a>
+            <a href="leistungen.html#maler" class="footer-link" data-i18n="tab_4_title">Maler- & Spachteltechnik Q3/Q4</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title" data-i18n="contact_info_title">Direkter Draht</h4>
+          <div class="footer-links" style="font-size: 0.875rem;">
+            <p><strong data-i18n="contact_phone_label">Telefon:</strong> <a href="tel:+4971149058230" data-i18n="contact_phone_val">+49 (0) 711 4905 8230</a></p>
+            <p><strong data-i18n="contact_email_label">E-Mail:</strong> <a href="mailto:kontakt@baubund-projekte.de" data-i18n="contact_email_val">kontakt@baubund-projekte.de</a></p>
+            <p><strong data-i18n="contact_hours_label">Erreichbarkeit:</strong> <span data-i18n="contact_hours_val">Mo – Sa: 07:30 – 19:00 Uhr</span></p>
+            <div style="margin-top: 1rem;">
+              <a href="kontakt.html" class="btn btn-primary btn-sm" data-i18n="nav_cta">Projekt anfragen</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span data-i18n="footer_copyright">© 2026 BAUBUND Projektgesellschaft. Alle Rechte vorbehalten.</span>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="kontakt.html" class="footer-link" data-i18n="footer_imprint">Impressum</a>
+          <a href="kontakt.html" class="footer-link" data-i18n="footer_privacy">Datenschutz</a>
+          <a href="kontakt.html" class="footer-link" data-i18n="footer_terms">AGB</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

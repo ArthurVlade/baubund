@@ -1,0 +1,18 @@
+{
+  "name": "baubund-website",
+  "version": "1.0.0",
+  "description": "BAUBUND - Handwerk, Material & Baukoordination aus einer Hand",
+  "main": "serve.js",
+  "scripts": {
+    "start": "node serve.js",
+    "scan": "node .agents/skills/avoid-ai-design/scripts/detect.mjs index.html leistungen.html ablauf.html partner.html rechner.html kontakt.html css/style.css css/components.css js/i18n.js js/calculator.js js/main.js"
+  },
+  "keywords": [
+    "handwerk",
+    "baukoordination",
+    "renovierung",
+    "generalunternehmer"
+  ],
+  "author": "BAUBUND",
+  "license": "ISC"
+}

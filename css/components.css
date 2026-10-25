@@ -845,6 +845,33 @@
   margin-top: 0.25rem;
 }
 
+/* Layout helper grid classes replacing inline grids */
+.services-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.partner-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.contact-layout-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 0.8fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.pitch-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
 @media print {
   .site-header, .site-footer, .cookie-banner, .btn-print-hide {
     display: none !important;
@@ -864,8 +891,11 @@
     gap: 2rem;
   }
 
-  .pillars-grid, .workflow-timeline {
+  .pillars-grid, .workflow-timeline,
+  .services-cards-grid, .partner-grid-2,
+  .contact-layout-grid, .pitch-grid-3 {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
   .trust-bar-grid {
@@ -907,5 +937,65 @@
 
   .trust-bar-grid {
     grid-template-columns: 1fr;
+  }
+
+  .showcase-detail-card {
+    padding: 1.25rem 1rem;
+  }
+
+  .detail-title {
+    font-size: 1.35rem;
+  }
+
+  .impact-callout-box {
+    padding: 0.85rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.65rem;
+  }
+
+  .pillar-card, .step-card, .faq-card {
+    padding: 1.25rem 1rem;
+  }
+
+  .material-feature-box {
+    padding: 1.5rem 1rem;
+    margin-top: 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .material-feature-title {
+    font-size: 1.35rem;
+  }
+
+  .calc-panel {
+    padding: 1.25rem 1rem;
+  }
+
+  .pitch-slide-card {
+    padding: 1.5rem 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .comparison-table th,
+  .comparison-table td {
+    padding: 0.75rem 0.85rem;
+    font-size: 0.8125rem;
+  }
+
+  .form-select, .form-input, .form-textarea {
+    font-size: 16px; /* Prevents auto-zoom on iOS */
+    padding: 0.65rem 0.85rem;
+  }
+
+  .slider-group {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+
+  .range-val-input {
+    width: 100%;
+    text-align: center;
   }
 }

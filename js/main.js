@@ -83,6 +83,14 @@ function initMobileMenu() {
   });
 
   // Close when clicking outside or pressing Escape
+  document.addEventListener('click', (e) => {
+    if (navMenu.classList.contains('nav-open') && !navMenu.contains(e.target) && !toggleBtn.contains(e.target)) {
+      toggleBtn.setAttribute('aria-expanded', 'false');
+      navMenu.classList.remove('nav-open');
+      document.body.classList.remove('menu-open');
+    }
+  });
+
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && navMenu.classList.contains('nav-open')) {
       toggleBtn.setAttribute('aria-expanded', 'false');

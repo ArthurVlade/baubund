@@ -49,9 +49,12 @@
   --max-width: 1200px;
   --header-height: 76px;
 
-  /* Transitions */
+  /* Transitions & Motion System (Emil Kowalski / animate principles) */
   --transition-fast: 150ms cubic-bezier(0.16, 1, 0.3, 1);
   --transition-smooth: 250ms cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-reveal: cubic-bezier(0.23, 1, 0.32, 1);
+  --duration-reveal: 400ms;
 }
 
 /* Base Reset */
@@ -712,5 +715,60 @@ img, svg {
 
   .header-cta-btn {
     display: none;
+  }
+}
+
+/* ==========================================================================
+   Subtle Scroll Reveal Animation (Desktop & Mobile)
+   Strictly adheres to Emil Kowalski & animate motion guidelines:
+   - GPU-accelerated: transform and opacity only
+   - Strong ease-out: cubic-bezier(0.23, 1, 0.32, 1)
+   - Vertical displacement: 14px (desktop) / 10px (mobile)
+   - Settles cleanly: unobserves and restores native state
+   - Full accessibility: prefers-reduced-motion override
+   ========================================================================== */
+
+/* State before scrolling into view (active only when reveal system is initialized) */
+.reveal-init .reveal-item:not(.is-revealed) {
+  opacity: 0;
+  transform: translateY(14px);
+}
+
+/* Active transition while revealing */
+.reveal-init .reveal-item:not(.reveal-settled) {
+  transition: opacity var(--duration-reveal) var(--ease-reveal),
+              transform var(--duration-reveal) var(--ease-reveal);
+  will-change: opacity, transform;
+}
+
+/* Revealed state */
+.reveal-init .reveal-item.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Settled state: drops will-change to free GPU memory and restores default component transitions */
+.reveal-init .reveal-item.reveal-settled {
+  will-change: auto;
+}
+
+/* Mobile responsive adjustments: snappier timing and tighter travel distance */
+@media (max-width: 768px) {
+  :root {
+    --duration-reveal: 320ms;
+  }
+
+  .reveal-init .reveal-item:not(.is-revealed) {
+    transform: translateY(10px);
+  }
+}
+
+/* Accessibility: prefers-reduced-motion completely bypasses movement */
+@media (prefers-reduced-motion: reduce) {
+  .reveal-init .reveal-item {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    will-change: auto !important;
   }
 }

@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initCookieBanner();
   initContactFormAutofill();
   initForms();
+  initScrollReveal();
 });
 
 // Smart header: disappears when scrolling down, reappears when scrolling up
@@ -228,5 +229,103 @@ function initForms() {
         }, 600);
       }
     });
+  });
+}
+
+// Subtle Scroll Reveal System (Desktop & Mobile)
+// Crafted in accordance with Emil Kowalski & animate motion guidelines
+function initScrollReveal() {
+  // If user prefers reduced motion, exit immediately
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    return;
+  }
+
+  // If IntersectionObserver is not supported, exit gracefully without hiding elements
+  if (!('IntersectionObserver' in window)) {
+    return;
+  }
+
+  const targetSelectors = [
+    '.reveal-on-scroll',
+    'section:not(.hero-section) .section-header',
+    '.pillars-grid > *',
+    '.services-cards-grid > *',
+    '.workflow-timeline > *',
+    '.partner-grid-2 > *',
+    '.pitch-grid-3 > *',
+    '.pitch-grid-2 > *',
+    '.pitch-slide-card',
+    '.showcase-layout',
+    '.material-feature-box',
+    '.faq-card',
+    '.calc-container',
+    '.calc-summary-card',
+    '.contact-layout-grid > *',
+    '.trust-bar'
+  ];
+
+  const elements = Array.from(document.querySelectorAll(targetSelectors.join(', ')));
+  if (!elements.length) return;
+
+  // Mark body as reveal-ready so CSS reveal rules engage
+  document.body.classList.add('reveal-init');
+
+  const isMobile = window.innerWidth < 768;
+  const rootMargin = isMobile ? '0px 0px -15px 0px' : '0px 0px -35px 0px';
+  const threshold = isMobile ? 0.04 : 0.08;
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        el.classList.add('is-revealed');
+        obs.unobserve(el);
+
+        // After the transition completes, settle the element and clean up inline delay
+        setTimeout(() => {
+          el.classList.add('reveal-settled');
+          el.style.transitionDelay = '';
+        }, 550);
+      }
+    });
+  }, {
+    root: null,
+    rootMargin: rootMargin,
+    threshold: threshold
+  });
+
+  // Apply subtle stagger (45ms) to sibling items in common grid lists
+  const gridSelectors = [
+    '.pillars-grid',
+    '.services-cards-grid',
+    '.workflow-timeline',
+    '.partner-grid-2',
+    '.pitch-grid-3',
+    '.pitch-grid-2',
+    '.faq-grid'
+  ];
+
+  gridSelectors.forEach(selector => {
+    document.querySelectorAll(selector).forEach(grid => {
+      const children = Array.from(grid.children);
+      children.forEach((child, idx) => {
+        child.style.transitionDelay = `${Math.min(idx * 45, 180)}ms`;
+      });
+    });
+  });
+
+  const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+
+  elements.forEach(el => {
+    el.classList.add('reveal-item');
+    const rect = el.getBoundingClientRect();
+
+    // If element is already in or near initial viewport on page load, reveal immediately
+    if (rect.top < viewportHeight - 25) {
+      el.classList.add('is-revealed', 'reveal-settled');
+      el.style.transitionDelay = '';
+    } else {
+      observer.observe(el);
+    }
   });
 }
